@@ -1,4 +1,4 @@
-# Maryland-Data-Pull
+# MD-Election-Pull
 
 This project involved gathering unofficial statewide precinct results after the Maryland statewide primary election. It's important to note that many counties are omitted, due to the absence of unofficial statewide primary election results.
 

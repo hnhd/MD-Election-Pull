@@ -45,4 +45,4 @@ for (i in 1:length(county_value)) {
 colnames(df) <- c("County ID", "Precinct", "Freddie Dickson", "Donna Edwards", "Ralph Jaffe", "Theresa Scaldaferri", "Charles Smith", "Violet Staley", "Blaine Taylor", "Ed Tinus", "Chris Van Hollen", "Lih Young")
 
 # export csv
-write.csv(df, "statewide-sen-1.csv")
+write.csv(df, "statewide-sen.csv")

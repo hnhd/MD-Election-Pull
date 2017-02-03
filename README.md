@@ -1,25 +1,7 @@
-# MD-Election-Pull
+In the simplest sense, this document references an existing list of county and precinct codes in Maryland and scrapes online unofficial primary election data stored by precinct for the election results. This script was written to extract the unofficial primary election results from the Maryland 2016 Senate primary election that were stored by precinct with election subdivisions rather than by election with precinct subdivision. Storing the data by precinct with election subdivisions made compiling a list by election with precinct subdivisions inextricably time-consuming manually. This process automates such a collection and then further narrows the selection to the specific election of interest. 
 
-This project involved gathering unofficial statewide precinct results after the Maryland statewide primary election. It's important to note that many counties are omitted, due to the absence of unofficial statewide primary election results.
+To understand a bit more about the format of the data, feel free to look at the data source here: https://www.electionwareresults.com/webResults/pollplace-110-100-Publish.html. This page shows primary election data from county 110 (Allegany County) in precinct 100. This is only one of 1091 pages scraped. As you can see, it shows all primary election results for the specific precinct with election subdividisions, rather than all primary election results with precinct subdivisions--the preferred format.
 
-## Data Pull
+There are three documents included in the folder. The script is housed in "precinct_extract_sen.R", while the county and precinct ID information is housed in “precint-county_list.csv". The output is "statewide-sen.csv,” which you will create when you run the script.
 
-All the R scripts used to pull information can be found in this folder. There are three scripts--one for each data pull. The first is for Maryland Congressional District 4, the second is for Maryland Congressional District 8, and the final is for Maryland Statewide. These scripts pull the information from the tables provided on the website and then rebuild tables with the desired information. Once the tables are produced, the results are exported into CSV files.
-
-## Precinct List
-
-This folder includes a list of the precincts desired for analysis. These precinct numbers were then cleaned and converted into the lists used in the R scripts.
-
-## Raw CSV
-
-These CSVs are the direct exports of the tables produced by the R scripts.
-
-## Cleaned CSV
-
-These CSVs are the cleaned versions of the table exports. These versions have a more specific Precinct Name and the County Name of the precincts. These CSVs were used primarily for mapping.
-
-## Potential Improvements to the Code
-
-The most significant improvement would come in the automation in downloading precinct information. Instead of several excel files including the precinct lists for each region, there would be one CSV file including the County ID, County Name, Precinct ID, and Precinct Name. This would reduce two steps: (1) The process of manually converting the precinct ids into R-friendly lines of code, and (2) The process of cleaning CSV files to add County Name and Precinct Name.
-
-Additionally, it would be important to automate the process of the CSVs export into the correct folder, which would just require a simple change in the code.
+In order to run the script ensure that the the working directory is (1) established where the csv is located and (2) that all required packages have been installed. Once both of those have been established, one should be able to run the script and output the image in the images folder. Please keep in mind that the script takes over twenty minutes to process and requires a connection to the internet. 

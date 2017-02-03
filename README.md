@@ -4,6 +4,6 @@ In the simplest sense, this document references an existing list of county and p
 
 To understand a bit more about the format of the data, feel free to look at the data source here: https://www.electionwareresults.com/webResults/pollplace-110-100-Publish.html. This page shows primary election data from county 110 (Allegany County) in precinct 100. This is only one of 1091 pages scraped. As you can see, it shows all primary election results for the specific precinct with election subdividisions, rather than all primary election results with precinct subdivisions--the preferred format.
 
-There are three documents included in the folder. The script is housed in "precinct_extract_sen.R", while the county and precinct ID information is housed in “precint-county_list.csv". The output is "statewide-sen.csv,” which you will create when you run the script.
+There are two documents included in the folder and one you will produce. The script is housed in "precinct_extract_sen.R", while the county and precinct ID information is housed in “precint-county_list.csv". The output is "statewide-sen.csv,” which you will create when you run the script.
 
 In order to run the script ensure that the the working directory is (1) established where the csv is located and (2) that all required packages have been installed. Once both of those have been established, one should be able to run the script and output the image in the images folder. Please keep in mind that the script takes over twenty minutes to process and requires a connection to the internet. 
